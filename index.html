@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<br>
+<head>
+  <title>Piazzetta Trattoria Menu</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+.header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: transparent;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+.main {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
+}
+.mainInner{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.mainInner div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, darkorange 30%, lightblue 80%);
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.sidebarMenuInner li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+    background-color: darkorange;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+  </style>
+</head> 
+<div class="header"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li><a href="#antipasto">Antipasto</a></li>
+      <li><a href="#soups">Soups</a></li>
+      <li><a href="#salads">Salads</a></li>
+      <li><a href="#pasta-dishes">Pasta Dishes</a></li>
+      <li><a href="#risottos">Risottos</a></li>
+      <li><a href="#meat-and-fish">Meat Fish</a></li>
+      <li><a href="#pizzas">Pizzas</a></li>
+      <li><a href="#kids-menu">Kids Menu</a></li>
+      <li><a href="#desserts">Desserts</a></li>
+    </ul>
+  </div>
+ <body>
+  <br>
+  <br>
+  <br>
+  <a href="Drink-Menu.pdf" download style="text-decoration: none; font-weight: bold;">OPEN the DRINK MENU!</a>
+  <h1>PIAZZETTA MENU</h1>
+  <h2 id="antipasto">Antipasto</h2>
+  <h3>Focaccia Bruschetta</h3>
+  <p>Fresh baked focaccia bread topped with herbed diced tomatoes</p>
+  <p>$12.00</p>
+  <h3>Cozze</h3>
+  <p>Fresh steamed Mussels, simmered in your choice of a seasoned tomato basil sauce or a white wine and garlic sauce with a touch of thyme</p>
+  <p>$19.00</p>
+  <h3>Antipasto Piazzetta</h3>
+  <p>Assorted cheesed, mixed olives, caprese, grilled Vegetables and sautéed mushrooms, prosciutto, salami, and fried calamari</p>
+  <p>(This platter is sized for two people; please tell your server if you want it for more than two people)</p>
+  <p>$35.00</p>
+  <h3>Fritto Misto</h3>
+  <p>Deep fried mixed fish served with marinara sauce on the side</p>
+  <p>For One $19.00/ For Two $31.00</p>
+  <h3>Calamari Fritti</h3>
+  <p>Deep fried calamari rings with marinara sauce on the side</p>
+  <p>$20.00</p>
+  <h3>Calamari Griglia</h3>
+  <p>Grilled calamari topped with balsamic vinegar, capers, diced tomatoes, and black olives</p>
+  <p>$21.00</p>
+  <h3>Carpaccio di Manzo</h3>
+  <p>Thins shavings of marinated beef tenderloin on a bed of mixed greens topped with Parmigiano shavings, lemon and extra virgin olive oil</p>
+  <p>$19.00</p>
+  <h3>Eggplant Parmigiana</h3>
+  <p>Fried eggplants topped with fresh mozzarella cheese and seasoning then baked in our wood oven for extra flavour</p>
+  <p>$19.00</p>
+  <h3>Gamberi Saltati in Padella</h3>
+  <p>Fresh shrimps sautéed in garlic and white wine</p>
+  <p>$19.00</p>
+  <h2 id="soups">Soups</h2>
+  <h3>Zuppa del Giorno</h3>
+  <p>Soup of the Day</p>
+  <p>$10.00</p>
+  <h3>Pasta e Fagioli Soup</h3>
+  <p>A classic blend of five beans traditional soup with a small amount of pasta and seasoning</p>
+  <p>$10.00</p>
+  <h3>Minestrone Soup</h3>
+  <p>Spring organic vegetable soup</p>
+  <h2 id="salads">Salads</h2>
+  <h3>Insalata Caprese</h3>
+  <p>Sliced fresh tomatoes with mozzarella di bufalo topped with fresh basil and extra virgin olive oil</p>
+  <p>$17.00</p>
+  <h3>Insalata Mista</h3>
+  <p>Mixed organic baby greens and sliced tomato dressed in our balsamic vinaigrette dressing</p>
+  <p>$12.00</p>
+  <h3>Insalata di Cesare</h3>
+  <p>Crisp romaine lettuce with home-made croutons, dressed in our Caesar dressing topped with parmigiano cheese</p>
+  <p>$14.00</p>
+  <h3>Insalata di Spinaci</h3>
+  <p>Fresh baby spinach topped with warm mushrooms in Balsamic vinaigrette dressing</p>
+  <p>$15.00</p>
+  <h3>Insalata di Rucola</h3>
+  <p>Fresh organic baby arugula and sliced tomato topped with fresh shavings of Parmigiano Cheese and dressed in our balsamic vinaigrette dressing</p>
+  <p>$18.00</p>
+  <h3>Insalata di Caprino</h3>
+  <p>Organic baby spring mix greens with grilled vegetables topped with goat cheese and dressed in our balsamic vinaigrette dressing</p>
+  <p>$18.00</p>
+  <h3>Burrata</h3>
+  <p>Fresh Italian Burrata cheese served with fresh tomatoes and basil topped with extra virgin olive oil.</p>
+  <p>For One $19.00 / For Two $28.00</p>
+  <h2 id="pasta-dishes">Pasta Dishes</h2>
+  <h3>Wood Oven Baked Pasta</h3>
+  <h4>Rigatoni al Forno</h4>
+  <p>Rigatoni in a tomato basil sauce with grilled Italian sausages topped with melted mozzarella cheese</p>
+  <p>$22.00</p>
+  <h4>Manicotti</h4>
+  <p>Two home-made roulade pastas stuffed with ricotta cheese and spinach in rose sauce</p>
+  <p>$21.00</p>
+  <h4>Lasagna al Forno</h4>
+  <p>Home-made all ground beef lasagne topped with mozzarella cheese</p>
+  <p>$22.00</p>
+  <h3>Traditional Pasta</h3>
+  <h4>Rigatoni alla Vodka</h4>
+  <p>Rigatoni with minced sweet red onions and bacon in a vodka rose sauce</p>
+  <p>$22.00</p>
+  <h4>Farfalle al Salmone</h4>
+  <p>Bow Tie pasta with smoked salmon and sweet red onions in a rose sauce</p>
+  <p>$22.00</p>
+  <h4>Fettucine Caprino</h4>
+  <p>Fettuccini with sun-dried tomatoes and black olives in tomato sauce topped with goat cheese</p>
+  <p>$21.00</p>
+  <h4>Penne Primavera</h4>
+  <p>Penne with a medley of seasonal vegetables in a tomato sauce</p>
+  <p>$20.00</p>
+  <h4>Penne con Salsicce</h4>
+  <p>Penne with grilled Italian sausages, diced tomatoes, garlic and fresh baby spinach</p>
+  <p>$22.00</p>
+  <h4>Spaghetti Bolognese</h4>
+  <p>Spaghetti in our traditional all ground beef tomato basil sauce</p>
+  <p>$22.00</p>
+  <h4>Linguine alla Pescatore</h4>
+  <p>Linguini with calamari, shrimps, mussels and baby clams in a tomato basil sauce</p>
+  <p>$29.00</p>
+  <h4>Spaghetti Gamberoni</h4>
+  <p>Spaghetti in a roasted garlic and tomato basil sauce topped with three grilled jumbo tiger shrimps</p>
+  <p>$29.00</p>
+  <h1 id="fresh-pasta">Fresh Home Made Pasta</h1>
+<h2>Gnocchi Napoli</h2>
+<p>Home-made gnocchi in your choice of rose sauce OR gorgonzola cheese sauce OR tomato bocconcini</p>
+<p>$22.00</p>
+<h2>Agnolotti al Pomodoro</h2>
+<p>Agnolotti stuffed with ricotta cheese and spinach in a fresh tomato sauce</p>
+<p>$21.00</p>
+<h2>Penne Ai Porcini</h2>
+<p>Penne with diced tomatoes, regular and fresh porcini mushrooms in a rose sauce</p>
+<p>$22.00</p>
+<h2>Fettucine Boscaiolo</h2>
+<p>Corn fettuccini with Portobello mushrooms, diced tomatoes and shrimps, in a roasted garlic and extra virgin</p>
+<p>$27.00</p>
+<h2>Fusilli con Pollo</h2>
+<p>Rice fusilli pasta with mushrooms, peas and grilled chicken in a pesto alfredo sauce</p>
+<p>$26.00</p>
+<h2>Orecchiette</h2>
+<p>Shell pasta with sausage and pesto, topped with arugula and feta cheese</p>
+<p>$27.00</p>
+<h1 id="risottos">Risottos</h1>
+<h2>Risotto with Wild Mushrooms</h2>
+<p>Risotto in wild mushroom sauce topped with Parmigiano cheese</p>
+<p>$29.00</p>
+<h2>Risotto alla Pescatore</h2>
+<p>Risotto with calamari, shrimps, mussels and baby clams in a tomato basil sauce</p>
+<p>$33.00</p>
+<h1 id="meat-and-fish">Meat and Fish</h1>
+<p>*All meat and fish entrees are served with assorted vegetables/substitute pasta</p>
+<h2>Scaloppine di Vitello al Limone</h2>
+<p>Pounded veal tenderloin sautéed in white wine and lemon sauce</p>
+<p>$29.00</p>
+<h2>Scaloppine di Vitello ai Porcini</h2>
+<p>Pounded veal tenderloin sautéed in a creamy porcini sauce</p>
+<p>$31.00</p>
+<h2>Cotolette di Vitello</h2>
+<p>Breaded veal parmigiana with fresh mozzarella cheese and tomato sauce</p>
+<p>$31.00</p>
+<h2>Pollo alla Griglia</h2>
+<p>Seasoned grilled chicken breast dressed in extra virgin olive oil and a hint of fresh lemon juice</p>
+<p>$29.00</p>
+<h2>Pollo al Limone</h2>
+<p>Chicken breast sautéed in white wine and fresh lemon sauce</p>
+<p>$29.00</p>
+<h2>Ossobuco</h2>
+<p>Lamb shank slowly braised in red white, tomato sauce and special seasoning served on a bed of angel hair pasta</p>
+<p>$33.00</p>
+<h2>Veal Chop</h2>
+<p>Fine cut of veal chop grilled to your liking and topped with sautéed mushrooms</p>
+<p>$39.00</p>
+<h2>Filetto di Salmone</h2>
+<p>Grilled seasoned fillet of salmon with garlic, white wine extra virgin olive oil and fresh lemon</p>
+<p>$31.00</p>
+<h2>Filetto di Branzino</h2>
+<p>Grilled seasoned fillet of sea-bass with fresh garlic, white wine, extra virgin olive oil and lemon juice</p>
+<p>$29.00</p>
+<h2>Grigliata di Pesce</h2>
+<p>Grilled salmon, sea-bass, calamari, and tiger shrimps dressed in garlic, white wine extra virgin olive oil and a hint of fresh lemon</p>
+<p>$39.00</p>
+<h2>Grigliata Mista di Carne</h2>
+<p>A platter of mixed grilled meats including fresh and cure cuts of beef, veal, pork, lamb and chicken</p>
+<p>$58.00</p>
+<h2>Zuppa di Pesce (Side dishes extra $4.00 per meal)</h2>
+<p>Fresh sea-bass, salmon, crab legs, mussels, calamari, baby clams and shrimps in a white wine and herbed tomato sauce slowly baked in our wood oven for extra flavour</p>
+<p>For One $38.00/ For Two $62.00</p>
+<h1 id="pizzas">Pizzas</h1>
+<p>9-Grain, Spelt, Whole Wheat or Multigrain Crust add $2.50</p>
+
+<h2>Pizza Margherita</h2>
+<p>Fresh home-made tomato sauce with mozzarella cheese and oregano</p>
+<p>$17.00</p>
+<h2>Pizza ai Pepperoni</h2>
+<p>Fresh tomato sauce, mozzarella cheese and pepperoni</p>
+<p>$19.00</p>
+<h2>Pizza Bolognese</h2>
+<p>Fresh tomato sauce, mozzarella cheese, and Italian meat sauce (ragu)</p>
+<p>$19.50</p>
+<h2>Siciliana</h2>
+<p>Fresh tomato sauce, mozzarella cheese, roasted peppers, grilled Italian sausages, sweet red onions and chilli flakes</p>
+<p>$21.50</p>
+<h2>Calabrese</h2>
+<p>Fresh tomato sauce, mozzarella cheese, Calabrese salami, green olives and chilli flakes</p>
+<p>$21.00</p>
+<h2>Affumicata</h2>
+<p>Fresh tomato sauce, mozzarella cheese, grilled chicken and herbed diced tomatoes</p>
+<p>$19.00</p>
+<h2>Piazzetta</h2>
+<p>Fresh tomato sauce, roasted bell peppers, eggplant, zucchini and sun-dried tomatoes</p>
+<p>*note no mozza. cheese</p>
+<p>$19.00</p>
+<h2>Quattro Stagioni</h2>
+<p>Fresh tomato sauce and four different slices, artichoke, sun-dried black olives, ham and mushrooms</p>
+<p>$21.00</p>
+<h2>Tradizionale</h2>
+<p>Fresh tomato sauce, fior di latte cheese, prosciutto and arugula.</p>
+<p>$21.50</p>
+<h2>Nduja</h2>
+<p>Fresh tomato sauce mozzarella cheese and homemade Italian sausage</p>
+<p>$19.50</p>
+<h2>Braccio di Ferro</h2>
+<p>Fresh tomato sauce, mozzarella cheese, spinach and mushrooms</p>
+<p>$19.00</p>
+<h2>Alto Adige</h2>
+<p>Fresh tomato sauce, mozzarella cheese, smoked prosciutto, bacon and Italian sausages</p>
+<p>$22.00</p>
+<h2>Quattro Formaggi</h2>
+<p>Four cheese pizza, with mozzarella, fior di latte, gorgonzola and parmigiano</p>
+<p>$21.00</p>
+<h2>Funghi Porcini</h2>
+<p>Fresh tomato sauce, mozzarella cheese, regular mushrooms and porcini mushrooms</p>
+<p>$21.00</p>
+<h1 id="kids-menu">Kids Menu</h1>
+<h2>Kids Spaghetti Bolognese</h2>
+<p>Spaghetti pasta in our traditional all ground beef and tomato sauce</p>
+<p>$10.00</p>
+<h2>Kids Spaghetti Pomodoro</h2>
+<p>Spaghetti pasta in our home-made tomato sauce</p>
+<p>$8.00</p>
+<h2>Kids Penne Piccolo</h2>
+<p>Penne pasta with your choice of rose OR Alfredo OR tomato OR butter sauce</p>
+<p>$8.00</p>
+<h2>Kids Tortellini Rose</h2>
+<p>Tortellini pasta stuffed with cheese in our home-made rose sauce</p>
+<p>$8.00</p>
+<h2>Kids Penne al Pollo</h2>
+<p>Penne pasta with tomato sauce topped with grilled chicken breast</p>
+<p>$13.00</p>
+<h2>Pollo Fritto</h2>
+<p>Chicken fingers and fresh cut fries</p>
+<p>$15.00</p>
+<h2>Add a Side:</h2>
+<ul>
+  <li>Steamed veggies $8</li>
+  <li>Grilled chicken breast $9</li>
+  <li>Fries $6</li>
+</ul>
+<h1 id="desserts">Desserts</h1>
+<h2>Homemade Tiramisu</h2>
+<p>The classic; handcrafted using our in-house recipe.</p>
+<p>$8.00</p>
+<h2>Orange Sorbet</h2>
+<p>Refreshing tangy orange sorbet, inside a traditionally authentic orange shell. A truly fat-free, non-dairy possibility.</p>
+<p>$8.00</p>
+<h2>Chocolate Mousse</h2>
+<p>A slice of chocolate cake layered with a rich, smooth, chocolate filling and topped with a fluffy chocolate mousse.</p>
+<p>$8.00</p>
+<h2>Cheese Cake</h2>
+<p>A decadent slice of cheese cake that will melt in your mouth. Ask your server for today’s topping.</p>
+<p>$8.00</p>
+<h2>Lemon Sorbet</h2>
+<p>Refreshing zesty lemon sorbet, inside a traditionally authentic lemon shell. A truly fat-free, non-dairy possibility.</p>
+<p>$8.00</p>
+<h2>Sicilian Crepe</h2>
+<p>A delicious crepe filled with our French vanilla ice-cream, sweet raspberry coulis and drizzled with Belgian chocolate.</p>
+<p>$8.00</p>      
+</body>
+</html>
